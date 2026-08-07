@@ -4,14 +4,12 @@ class Solution {
             return false;
         }
         int copy = x;
-        int digit = 0;
         int rev = 0;
         while(x!=0){
-            digit = x%10;
-            rev = rev * 10 + digit;
+            rev = rev * 10 + x % 10;
             x = x/10;
         }
-        if(copy == rev){
+        if(rev == copy){
             return true;
         }
         return false;
